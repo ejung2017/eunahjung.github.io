@@ -26,5 +26,58 @@
             </div>
         </div>
     </div>
+    <!-------------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Descriptions</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Quality Assurance</span><br>Manual & Automation Testing</li>
+                            <li><span>Project Management</span><br>Agile and Waterfall Methodologies</li>
+                            <li><span>3D Printing</span><br>Blender CAD</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 Mar - Present</span><br>Quality Analyst at Apple</li>
+                            <li><span>2021 Jun - 2022 Jun</span><br>IT Digital & Channels Solution Trainee at Hong Kong Jockey Club</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017 Sep - 2022 Dec</span><br>BSc from University of Hong Kong</li>
+                            <li><span>2010 Sep - 2017 Jun</span><br>IBDP from Chadwick International</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links"); 
+        var tabcontents = document.getElementsByClassName("tab-contents"); 
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
